@@ -4,6 +4,7 @@
 <head>
     <meta charset='utf-8'>
     <title>App to check How much you Ate</title>
+    <div>**WE do NOT consider an empty item</div>
     <script src='angular.min.js'></script>
     <script src='app.js'></script>
 </head>
@@ -11,9 +12,10 @@
 <body ng-app='lunchapp'>
     <div ng-controller='Lunchcontroller'>
         <h1>Enter the Items you Ate For Lunch separated by commas</h1>
-        <input type="text" ng-model="lunchtextbox">
+        <input type="text" ng-model="lunchtextbox" ng-style ="textboxstyle">
         <button ng-click="checkitems();">Check If Too Much</button>
-        <div>{{checkstatus}}</div>
+        <br>
+        <div ng-style ="messagestyle">{{checkstatus}}</div>
     </div>
 </body>
 
