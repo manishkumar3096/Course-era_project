@@ -1,0 +1,24 @@
+<!-- <ol class='listse'>
+    <li  ng-repeat="item in ctrl.found">
+        name is :{{item.name}} , short Name : {{item.short_name}}, Description: {{item.description}}
+        <button ng-click="ctrl.onRemove({index:$index})">Don't want this one!</button>
+    </li>
+    <br>
+</ol> -->
+
+<table class='listse' ng-if='!ctrl.lengthff'>
+    <tr>
+        <th>Name</th>
+        <th>Short Name</th>
+        <th>Description</th>
+        <th>Remove Button</th>
+      </tr>
+      <tr ng-repeat="item in ctrl.found">
+        <td >{{item.name}}</td>
+        <td>{{item.short_name}}</td>
+        <td>{{item.description}}</td>
+        <td><button ng-click="ctrl.onRemove({index:$index})">Don't want this one!</button></td>
+      </tr>
+
+</table>
+<div class="warning" ng-if='ctrl.lengthff'>Nothing found</div>
